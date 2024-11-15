@@ -1,0 +1,138 @@
+/****General****/
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --main-color: #9356dc;
+  --secondary-color: #ff79da;
+  --third-color: #99e2d0;
+}
+
+body {
+  background-color: #f6f6f6;
+  margin: 0;
+}
+
+.main-container {
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 345px;
+  min-height: 2252px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles par défaut pour mobile */
+
+/**** Header ****/
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 63px;
+  width: 100%;
+  box-shadow: 0px 2px 4px 0px #00000026;
+}
+
+.icon-arrow {
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+
+.logo-header img {
+  width: 197px;
+  height: 36px;
+}
+
+.localisation-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  background-color: #eaeaea;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  gap: 5%;
+}
+
+.localisation-header p {
+  margin: 0;
+}
+/**** Main ****/
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/**Main High**/
+.main-high {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.main-high h2 {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0px 30px 0px 30px;
+}
+
+.main-high p {
+  margin: 0;
+}
+
+.btn-dark-pink {
+  width: 186px;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px #00000040;
+  background: linear-gradient(0deg, var(--main-color), var(--secondary-color));
+  border-style: none;
+  color: #ffffff;
+  font-weight: 500;
+}
+.btn-dark-pink:hover {
+  opacity: 75%;
+}
+
+/***Main Center***/
+.main-center {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  height: 440px;
+  justify-content: space-around;
+}
+
+.main-center h2 {
+  margin: 0 4% 0 4%;
+}
+.main-center-band-boutton {
+  display: flex;
+  flex-direction: column;
+  margin: 0 4% 0 4%;
+  gap: 15px;
+}
+.main-center-boutton {
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px #00000026;
+  border-style: none;
+}
+/* Styles pour tablettes et plus grands écrans */
+@media (min-width: 768px) {
+}
+
+/* Styles pour les écrans d'ordinateur */
+@media (min-width: 1024px) {
+}
