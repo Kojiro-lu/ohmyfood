@@ -79,16 +79,21 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  gap: 25px;
+  width: 100%;
+  height: 270px;
+  justify-content: center;
 }
 
 .main-high h2 {
   margin: 0;
   box-sizing: border-box;
-  padding: 0px 30px 0px 30px;
+  padding: 0px 45px 0px 45px;
 }
 
 .main-high p {
   margin: 0;
+  padding: 0px 5px 0px 5px;
 }
 
 .btn-dark-pink {
@@ -111,7 +116,7 @@ main {
   flex-direction: column;
   background-color: #ffffff;
   height: 440px;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .main-center h2 {
@@ -120,15 +125,184 @@ main {
 .main-center-band-boutton {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0 4% 0 4%;
-  gap: 15px;
+  gap: 25px;
 }
 .main-center-boutton {
   background-color: #f6f6f6;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px #00000026;
   border-style: none;
+  display: flex;
+  justify-content: center;
+  height: 72.38px;
+  width: 322.49px;
+  align-items: center;
+  position: relative;
 }
+.main-center-boutton p {
+  font-weight: 500;
+}
+
+.circle-number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -10px;
+}
+
+.circle-number p {
+  color: #ffffff;
+  margin: 0;
+}
+
+i {
+  color: var(--main-color);
+  font-size: 18px;
+}
+
+.icon-texte {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 30px;
+  align-items: center;
+  margin-left: 10%;
+}
+
+/**** Main Down****/
+.main-down {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 1250px;
+  width: auto;
+  padding: 0 10px 0 10px;
+}
+.main-down-title {
+  width: 100%;
+}
+.main-down-title h2 {
+  margin: 0;
+}
+.main-down-cards {
+  width: 340px;
+  height: 251px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.card-label {
+  position: absolute;
+  width: 80px;
+  height: 29px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px 0px #00000026;
+  background-color: var(--third-color);
+  color: #008766;
+  top: 7px;
+  right: 9px;
+  align-content: center;
+  text-align: center;
+}
+.card-label p {
+  margin: 0;
+  font-weight: 500;
+}
+.card img {
+  width: 100%;
+  height: 70%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+  background-color: #ffffff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.card-txt {
+  position: relative;
+  width: 100%;
+}
+
+.icon-heart {
+  position: absolute;
+  left: 300px;
+}
+.fa-heart {
+  font-size: 22px;
+  color: black;
+  font-weight: 100;
+}
+.fa-heart:active {
+  color: red;
+}
+.card-title {
+  margin: 0 0 1% 4%;
+}
+.card-subtitle {
+  margin: 0 0 0 4%;
+  font-weight: 300;
+}
+
+/****Footer****/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  background-color: #353535;
+  gap: 16px;
+  padding: 22px 25px 22px 25px;
+}
+
+.footer-title h1 {
+  margin: 0;
+  font-family: "Shrikhand";
+  font-weight: 400;
+  font-style: italic;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.footer-text a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 3%;
+  align-items: center;
+}
+
+.fa-utensils,
+.fa-handshake-angle {
+  color: #ffffff;
+  font-size: 12px;
+  width: 11px;
+}
+
 /* Styles pour tablettes et plus grands écrans */
 @media (min-width: 768px) {
 }
