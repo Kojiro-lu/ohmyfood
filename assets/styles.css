@@ -122,14 +122,14 @@ main {
 .main-center h2 {
   margin: 0 4% 0 4%;
 }
-.main-center-band-boutton {
+.main-center__band-boutton {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 4% 0 4%;
   gap: 25px;
 }
-.main-center-boutton {
+.main-center__boutton {
   background-color: #f6f6f6;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px #00000026;
@@ -141,7 +141,7 @@ main {
   align-items: center;
   position: relative;
 }
-.main-center-boutton p {
+.main-center__boutton p {
   font-weight: 500;
 }
 
@@ -181,17 +181,18 @@ i {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   height: 1250px;
   width: auto;
   padding: 0 10px 0 10px;
 }
-.main-down-title {
+.main-down__title {
   width: 100%;
 }
-.main-down-title h2 {
+.main-down__title h2 {
   margin: 0;
 }
-.main-down-cards {
+.main-down__cards {
   width: 340px;
   height: 251px;
 }
@@ -202,7 +203,7 @@ i {
   height: 100%;
   position: relative;
 }
-.card-label {
+.card__label {
   position: absolute;
   width: 80px;
   height: 29px;
@@ -215,7 +216,7 @@ i {
   align-content: center;
   text-align: center;
 }
-.card-label p {
+.card__label p {
   margin: 0;
   font-weight: 500;
 }
@@ -226,7 +227,7 @@ i {
   border-top-right-radius: 15px;
 }
 
-.card-content {
+.card__content {
   display: flex;
   align-items: center;
   width: 100%;
@@ -235,7 +236,7 @@ i {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
-.card-txt {
+.card__txt {
   position: relative;
   width: 100%;
 }
@@ -252,10 +253,10 @@ i {
 .fa-heart:active {
   color: red;
 }
-.card-title {
+.card__title {
   margin: 0 0 1% 4%;
 }
-.card-subtitle {
+.card__subtitle {
   margin: 0 0 0 4%;
   font-weight: 300;
 }
@@ -271,7 +272,7 @@ footer {
   padding: 22px 25px 22px 25px;
 }
 
-.footer-title h1 {
+.footer__title h1 {
   margin: 0;
   font-family: "Shrikhand";
   font-weight: 400;
@@ -280,13 +281,13 @@ footer {
   font-size: 18px;
 }
 
-.footer-text {
+.footer__text {
   display: flex;
   flex-direction: column;
   gap: 7px;
 }
 
-.footer-text a {
+.footer__text a {
   color: #ffffff;
   text-decoration: none;
   font-size: 16px;
