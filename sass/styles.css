@@ -350,8 +350,6 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
   }
-  .main-down__card {
-  }
   /***Footer***/
   footer {
     flex-direction: row-reverse;
