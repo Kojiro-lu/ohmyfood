@@ -213,12 +213,9 @@ main {
   align-items: center;
   position: absolute;
   left: -10px;
+  color: white;
 }
 
-.circle-number p {
-  color: #ffffff;
-  margin: 0;
-}
 .main-center__band-boutton .icon-texte i {
   color: grey;
 }
@@ -403,6 +400,7 @@ footer {
   height: 16px;
   position: absolute;
   left: 17px;
+  top: 23px;
 }
 
 /***Main Image***/
