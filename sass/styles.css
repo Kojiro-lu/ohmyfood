@@ -14,15 +14,73 @@ body {
   margin: 0;
 }
 
-.main-container {
+/*** Loader ***/
+body .block__loader {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100vh;
+  animation: bk 3s ease-in forwards;
+  -moz-animation: bk 3s ease-in forwards;
+  /* Firefox */
+  -webkit-animation: bk 3s ease-in forwards;
+  /* Safari et Chrome */
+  -o-animation: bk 3s ease-in forwards;
+  /* Opera */
+}
+
+@keyframes bk {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -2;
+  }
+}
+body .loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid var(--main-color); /* Couleur principale du loader */
+  border-top-color: var(--secondary-color); /* Couleur du dessus du loader */
+  border-bottom-color: var(--third-color); /* Couleur bas du loader */
+  z-index: 1;
+  animation: spin 3000ms ease-in forwards;
+  -moz-animation: spin 3000ms ease-in forwards;
+  /* Firefox */
+  -webkit-animation: spin 3000ms ease-in forwards;
+  /* Safari et Chrome */
+  -o-animation: spin 3000ms ease-in forwards;
+  /* Opera */
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+/* Styles par défaut pour mobile */
+
+.main-container {
   box-sizing: border-box;
   min-width: 345px;
   display: flex;
   flex-direction: column;
 }
-
-/* Styles par défaut pour mobile */
 
 /**** Header ****/
 header {
@@ -39,17 +97,11 @@ header {
   height: 63px;
   width: 100%;
   box-shadow: 0px 2px 4px 0px #00000026;
-}
-
-.icon-arrow {
-  width: 30px;
-  height: 30px;
-  display: none;
+  position: relative;
 }
 
 .logo-header img {
-  width: 197px;
-  height: 36px;
+  width: 162px;
 }
 
 .localisation-header {
@@ -167,9 +219,14 @@ main {
   color: #ffffff;
   margin: 0;
 }
-
-i {
+.main-center__band-boutton .icon-texte i {
+  color: grey;
+}
+.main-center__band-boutton .icon-texte:hover i {
   color: var(--main-color);
+}
+
+.icon-texte i {
   font-size: 18px;
 }
 
@@ -197,6 +254,10 @@ i {
 }
 .main-down__title h2 {
   margin: 0 4% 0 4%;
+}
+.main-down__cards a {
+  text-decoration: none;
+  color: unset;
 }
 .main-down__cards {
   display: flex;
@@ -236,6 +297,7 @@ i {
   height: 70%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  object-fit: cover;
 }
 
 .card__content {
@@ -334,36 +396,271 @@ footer {
   width: 11px;
 }
 
+/************ Page Menu Restaurant *********/
+/***Header***/
+.icon-arrow {
+  width: 17px;
+  height: 16px;
+  position: absolute;
+  left: 17px;
+}
+
+/***Main Image***/
+.main-image {
+  width: 100%;
+  height: 275px;
+}
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/***Main Menu***/
+.main-menu-centre {
+  background-color: transparent;
+  box-sizing: border-box;
+  height: auto;
+}
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  align-items: center;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: #f6f6f6;
+  position: relative;
+  margin-top: -55px;
+}
+.main-titre {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.main-titre__global {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 349px;
+  padding: 0px 10px;
+  padding-top: 32px;
+}
+.main-titre__h1 {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 28px;
+  margin: 0;
+  width: calc(100% - 23px);
+}
+
+.main-titre__icone-heart {
+  width: 23px;
+  height: 21px;
+  padding-right: 25px;
+}
+.main-titre__icone-heart img {
+  width: 22px;
+  height: 21px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.main-titre__icone-heart__gradient {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 42px;
+}
+
+.main-titre__icone-heart__white {
+  opacity: 1;
+}
+
+.main-titre__icone-heart:hover .main-titre__icone-heart__white {
+  opacity: 0;
+}
+
+.main-titre__icone-heart:hover .main-titre__icone-heart__gradient {
+  opacity: 1;
+}
+.main-menu__entrees {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px 10px 0px 10px;
+  box-sizing: border-box;
+}
+.main-menu__plats,
+.main-menu__desserts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 30px 10px 0px 10px;
+  box-sizing: border-box;
+}
+
+.main-menu__entrees h2,
+.main-menu__plats h2,
+.main-menu__desserts h2 {
+  font-weight: 300;
+  font-size: 16px;
+  border-bottom: solid 3px #99e2d0;
+  width: 40px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  padding-bottom: 8px;
+}
+
+.main-menu__entrees {
+  animation: appear 1s ease forwards;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.main-menu__plats {
+  animation: appear 1s ease forwards 0.5s;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.main-menu__desserts {
+  animation: appear 1s ease forwards 1s;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.menu-card__content {
+  background-color: #ffffff;
+  border-radius: 15px;
+  width: 349px;
+  height: 69px;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 4.01px 15.04px 0px #0000001a;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.menu-card__content__stick {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.menu-card__content__stick__title {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.menu-card__content__stick__title h3,
+.menu-card__text__presentation p {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu-card__content__stick__title h3 {
+  font-weight: 500;
+  font-size: 18px;
+}
+.menu-card__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.menu-card__text__presentation {
+  font-weight: 300;
+  font-size: 15px;
+  width: calc(100% - 37px);
+}
+
+.menu-card__text__tarif {
+  width: 37px;
+  height: 18px;
+  text-align: center;
+}
+.menu-card__content__validate {
+  width: 0px;
+  height: 100%;
+  background-color: var(--third-color);
+  border-radius: 0px 15px 15px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.menu-card__content__validate i {
+  color: white;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.menu-card__content:hover .menu-card__content__validate {
+  width: 59px;
+}
+.menu-card__content:hover .menu-card__content__validate i {
+  opacity: 1;
+}
+.menu-card__content:hover .menu-card__content__stick {
+  width: calc(100% - 59px);
+}
+
+/***Bouton***/
+.main-menu__bouton {
+  margin: 40px 0;
+  box-sizing: border-box;
+}
+
 /* Styles pour tablettes et plus grands écrans */
 @media (min-width: 768px) {
-  /***Main Center***/
-  .main-center__band-boutton {
-    flex-direction: row;
-  }
-  .icon-texte {
-    gap: 8%;
-  }
-
   /***Main Down***/
   .main-down__cards {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
   }
-  /***Footer***/
-  footer {
-    flex-direction: row-reverse;
-    height: 114px;
-    padding: 25px 30px 25px 30px;
-    align-items: end;
-  }
 
-  .footer__text {
-    flex-direction: row;
-    width: 661px;
+  /*****Page Restaurant*****/
+  .main-image {
+    height: 375px;
   }
-  .footer__text a {
-    display: inline;
+  .main-menu__entrees {
+    width: 80%;
+  }
+  .menu-card__content {
+    width: 100%;
+  }
+  .main-menu__plats,
+  .main-menu__desserts {
+    width: 80%;
   }
 }
 /* Styles pour les écrans d'ordinateur */
@@ -371,6 +668,10 @@ footer {
   /***Header***/
   .localisation-header {
     gap: 1.5%;
+  }
+  .main-menu__icone-heart__gradient {
+    top: 40px;
+    left: 707px;
   }
 
   /***Main High***/
@@ -404,10 +705,6 @@ footer {
     flex-direction: row;
     width: 75%;
     justify-content: space-between;
-  }
-
-  .main-center__boutton {
-    width: 31%;
   }
 
   /***Main Down***/
@@ -450,5 +747,17 @@ footer {
   }
   .footer__text a {
     display: inline;
+  }
+
+  /*****Page Restaurant*****/
+  main {
+    align-items: center;
+    background-color: white;
+  }
+  .main-image {
+    height: 500px;
+  }
+  .main-menu-centre {
+    width: 73%;
   }
 }
