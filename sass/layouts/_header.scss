@@ -1,0 +1,48 @@
+/**** Header ****/
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .localisation-header {
+    gap: 1.5%;
+  }
+}
+
+.title-header {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 63px;
+  width: 100%;
+  box-shadow: $box-shadow-one;
+  position: relative;
+}
+
+.logo-header img {
+  width: 162px;
+}
+
+.localisation-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  background-color: #eaeaea;
+  box-shadow: $box-shadow-two;
+  gap: 5%;
+}
+
+.localisation-header__icone .fa-solid {
+  color: $color-black;
+}
+
+.localisation-header p {
+  margin: 0;
+}
