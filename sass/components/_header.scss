@@ -1,0 +1,50 @@
+/**** Header ****/
+header {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  &__title {
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 63px;
+    width: 100%;
+    box-shadow: var(--box-shadow-one);
+    position: relative;
+
+    &__logo img {
+      width: 162px;
+    }
+    &__icone-arrow {
+      width: 17px;
+      height: 16px;
+      position: absolute;
+      left: 17px;
+      top: 23px;
+    }
+  }
+  &__localisation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow-two);
+    gap: 5%;
+    @media (min-width: 1024px) {
+      gap: 1.5%;
+    }
+
+    &__icone .fa-solid {
+      color: var(--color-black);
+    }
+    p {
+      margin: 0;
+    }
+  }
+}

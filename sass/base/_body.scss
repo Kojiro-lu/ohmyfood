@@ -1,0 +1,12 @@
+/***Body***/
+body {
+  background-color: var(--background-color-body);
+  margin: 0;
+}
+
+.main-container {
+  box-sizing: border-box;
+  min-width: 345px;
+  display: flex;
+  flex-direction: column;
+}

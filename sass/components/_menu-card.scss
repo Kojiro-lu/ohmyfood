@@ -1,3 +1,4 @@
+/****Card des menus****/
 .menu-card {
   &__content {
     background-color: #ffffff;
@@ -9,22 +10,18 @@
     box-shadow: 0px 4.01px 15.04px 0px #0000001a;
     overflow: hidden;
     transition: all 0.3s ease;
-    &:hover {
-      &__validate {
-        width: 59px;
-        i {
-          opacity: 1;
-        }
+    &:hover &__validate {
+      width: 59px;
+      i {
+        opacity: 1;
       }
-      &__stick {
-        width: calc(100% - 59px);
-      }
+    }
+    &:hover &__stick {
+      width: calc(100% - 59px);
     }
 
     @media (min-width: 768px) {
-      .menu-card__content {
-        width: 100%;
-      }
+      width: 100%;
     }
     &__stick {
       width: 100%;
@@ -92,20 +89,3 @@
     }
   }
 }
-
-/*<div class="menu-card__content">
-                    <div class="menu-card__content__stick">
-                      <div class="menu-card__content__stick__title">
-                        <h3>Tartare de thon</h3>
-                      </div>
-                      <div class="menu-card__text">
-                        <div class="menu-card__text__presentation">
-                          <p>Assaisonné au yuzu</p>
-                        </div>
-                        <div class="menu-card__text__tarif"><b>25€</b></div>
-                      </div>
-                    </div>
-                    <div class="menu-card__content__validate">
-                      <i class="fas fa-check-circle"></i>
-                    </div>
-                  </div>*/
