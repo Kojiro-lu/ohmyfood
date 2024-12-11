@@ -1,3 +1,5 @@
+@use "../utils/variables" as vars;
+
 /**Main High**/
 .main__high {
   display: flex;
@@ -35,14 +37,10 @@
     width: 186px;
     height: 50px;
     border-radius: 25px;
-    box-shadow: var(--box-shadow-three);
-    background: linear-gradient(
-      0deg,
-      var(--main-color),
-      var(--secondary-color)
-    );
+    box-shadow: vars.$box-shadow-three;
+    background: linear-gradient(0deg, vars.$main-color, vars.$secondary-color);
     border-style: none;
-    color: var(--color-white);
+    color: vars.$color-white;
     font-weight: 500;
     &:hover {
       opacity: 75%;
@@ -54,7 +52,7 @@
 .main__center {
   display: flex;
   flex-direction: column;
-  background-color: var(--color-white);
+  background-color: vars.$color-white;
   box-sizing: border-box;
   gap: 25px;
   padding: 40px 0px 50px 0px;
@@ -86,9 +84,9 @@
     }
   }
   &__boutton {
-    background-color: var(--color-white);
+    background-color: vars.$color-white;
     border-radius: 20px;
-    box-shadow: var(--box-shadow-for);
+    box-shadow: vars.$box-shadow-for;
     border-style: none;
     display: flex;
     justify-content: center;
@@ -103,13 +101,13 @@
       width: 24px;
       height: 24px;
       border-radius: 50%;
-      background-color: var(--main-color);
+      background-color: vars.$main-color;
       display: flex;
       justify-content: center;
       align-items: center;
       position: absolute;
       left: -10px;
-      color: var(--color-white);
+      color: vars.$color-white;
     }
     &__icon-texte {
       display: flex;
@@ -118,16 +116,17 @@
       gap: 12%;
       align-items: center;
       margin-left: 10%;
+      font-weight: 500;
       i {
         font-size: 18px;
       }
     }
   }
   &__band-boutton .main__center__boutton__icon-texte i {
-    color: var(--color-grey);
+    color: vars.$color-grey-icone;
   }
   &__band-boutton .main__center__boutton__icon-texte:hover i {
-    color: var(--main-color);
+    color: vars.$main-color;
   }
 }
 

@@ -1,9 +1,11 @@
+@use "../utils/variables" as vars;
+
 /****Footer****/
 footer {
   display: flex;
   flex-direction: column;
   height: auto;
-  background-color: var(--background-color-footer);
+  background-color: vars.$background-color-footer;
   gap: 16px;
   padding: 22px 25px 22px 25px;
   box-sizing: border-box;
@@ -17,7 +19,7 @@ footer {
 .footer {
   &__title h1 {
     margin: 0;
-    font-family: var(--font-family-2);
+    font-family: vars.$font-family-2;
     font-weight: 400;
     font-style: italic;
     color: #ffffff;
@@ -48,7 +50,7 @@ footer {
 }
 .fa-utensils,
 .fa-handshake-angle {
-  color: #ffffff;
+  color: vars.$color-white;
   font-size: 12px;
   width: 11px;
 }

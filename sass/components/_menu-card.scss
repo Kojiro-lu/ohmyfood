@@ -1,7 +1,9 @@
+@use "../utils/variables" as vars;
+
 /****Card des menus****/
 .menu-card {
   &__content {
-    background-color: #ffffff;
+    background-color: vars.$color-white;
     border-radius: 15px;
     width: 349px;
     height: 69px;
@@ -20,8 +22,8 @@
       width: calc(100% - 59px);
     }
 
-    @media (min-width: 768px) {
-      width: 100%;
+    @media (min-width: 1024px) {
+      width: 638px;
     }
     &__stick {
       width: 100%;
@@ -51,14 +53,14 @@
     &__validate {
       width: 0px;
       height: 100%;
-      background-color: var(--third-color);
+      background-color: vars.$third-color;
       border-radius: 0px 15px 15px 0px;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: all 0.3s ease;
       i {
-        color: var(--color-white);
+        color: vars.$color-white;
         width: 20px;
         height: 20px;
         opacity: 0;

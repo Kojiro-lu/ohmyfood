@@ -1,6 +1,8 @@
+@use "../utils/variables" as vars;
+
 /*** Loader ***/
 .loader {
-  background-color: white;
+  background-color: vars.$color-white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,9 +23,9 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 10px solid var(--main-color); /* Couleur principale du loader */
-    border-top-color: var(--secondary-color); /* Couleur du dessus du loader */
-    border-bottom-color: var(--third-color); /* Couleur bas du loader */
+    border: 10px solid vars.$main-color; /* Couleur principale du loader */
+    border-top-color: vars.$secondary-color; /* Couleur du dessus du loader */
+    border-bottom-color: vars.$third-color; /* Couleur bas du loader */
     z-index: 1;
     animation: spin 3000ms ease-in forwards;
     -moz-animation: spin 3000ms ease-in forwards;

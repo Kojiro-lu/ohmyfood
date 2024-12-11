@@ -1,6 +1,11 @@
+@use "../utils/variables" as vars;
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 /***Body***/
 body {
-  background-color: var(--background-color-body);
+  background-color: vars.$background-color-body;
   margin: 0;
 }
 

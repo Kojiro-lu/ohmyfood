@@ -1,3 +1,5 @@
+@use "../utils/variables" as vars;
+
 /****Card***/
 .card {
   display: flex;
@@ -10,9 +12,9 @@
     width: 80px;
     height: 29px;
     border-radius: 2px;
-    box-shadow: var(--box-shadow-one);
-    background-color: var(--third-color);
-    color: var(--color-car-label);
+    box-shadow: vars.$box-shadow-one;
+    background-color: vars.$third-color;
+    color: vars.$color-car-label;
     top: 7px;
     right: 9px;
     align-content: center;
@@ -34,7 +36,7 @@
     align-items: center;
     width: 100%;
     height: 30%;
-    background-color: var(--color-white);
+    background-color: vars.$color-white;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     &__txtandheart {
@@ -43,7 +45,6 @@
       &__icon-heart {
         position: absolute;
         left: 300px;
-
         @media (min-width: 1024px) {
           left: 90%;
         }

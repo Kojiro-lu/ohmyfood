@@ -38,9 +38,16 @@
 /*************/
 /****Base*****/
 /*************/
+/*************/
+/**Utils**/
+/*************/
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 /***Body***/
 body {
-  background-color: var(--background-color-body);
+  background-color: #f6f6f6;
   margin: 0;
 }
 
@@ -61,26 +68,32 @@ main {
 /*************/
 /****Layout***/
 /*************/
-.main__high__btn-dark-pink {
+/*************/
+/**Utils**/
+/*************/
+.btn-dark-pink {
   width: 186px;
   height: 50px;
   border-radius: 25px;
-  box-shadow: var(--box-shadow-three);
-  background: linear-gradient(0deg, var(--main-color), var(--secondary-color));
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  background: linear-gradient(0deg, #9356dc, #ff79da);
   border-style: none;
-  color: var(--color-white);
+  color: #ffffff;
   font-weight: 500;
 }
-.main__high__btn-dark-pink:hover {
+.btn-dark-pink:hover {
   opacity: 75%;
 }
 
 /************/
 /*Components*/
 /************/
+/*************/
+/**Utils**/
+/*************/
 /*** Loader ***/
 .loader {
-  background-color: white;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,9 +115,9 @@ main {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 10px solid var(--main-color); /* Couleur principale du loader */
-  border-top-color: var(--secondary-color); /* Couleur du dessus du loader */
-  border-bottom-color: var(--third-color); /* Couleur bas du loader */
+  border: 10px solid #9356dc; /* Couleur principale du loader */
+  border-top-color: #ff79da; /* Couleur du dessus du loader */
+  border-bottom-color: #99e2d0; /* Couleur bas du loader */
   z-index: 1;
   animation: spin 3000ms ease-in forwards;
   -moz-animation: spin 3000ms ease-in forwards;
@@ -115,6 +128,9 @@ main {
   /* Opera */
 }
 
+/*************/
+/**Utils**/
+/*************/
 /**** Header ****/
 header {
   display: flex;
@@ -122,14 +138,14 @@ header {
 }
 
 .header__title {
-  background-color: var(--color-white);
+  background-color: #ffffff;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   height: 63px;
   width: 100%;
-  box-shadow: var(--box-shadow-one);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
   position: relative;
 }
 .header__title__logo img {
@@ -149,8 +165,8 @@ header {
   justify-content: center;
   height: 50px;
   width: 100%;
-  background-color: var(--color-white);
-  box-shadow: var(--box-shadow-two);
+  background-color: #eaeaea;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
   gap: 5%;
 }
 @media (min-width: 1024px) {
@@ -159,12 +175,15 @@ header {
   }
 }
 .header__localisation__icone .fa-solid {
-  color: var(--color-black);
+  color: #000000;
 }
 .header__localisation p {
   margin: 0;
 }
 
+/*************/
+/**Utils**/
+/*************/
 /****Card des menus****/
 .menu-card__content {
   background-color: #ffffff;
@@ -186,9 +205,9 @@ header {
 .menu-card__content:hover .menu-card__content__stick {
   width: calc(100% - 59px);
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .menu-card__content {
-    width: 100%;
+    width: 638px;
   }
 }
 .menu-card__content__stick {
@@ -218,7 +237,7 @@ header {
 .menu-card__content__validate {
   width: 0px;
   height: 100%;
-  background-color: var(--third-color);
+  background-color: #99e2d0;
   border-radius: 0px 15px 15px 0px;
   display: flex;
   justify-content: center;
@@ -226,7 +245,7 @@ header {
   transition: all 0.3s ease;
 }
 .menu-card__content__validate i {
-  color: var(--color-white);
+  color: #ffffff;
   width: 20px;
   height: 20px;
   opacity: 0;
@@ -255,6 +274,9 @@ header {
   text-align: center;
 }
 
+/*************/
+/**Utils**/
+/*************/
 /****Card***/
 .card {
   display: flex;
@@ -268,9 +290,9 @@ header {
   width: 80px;
   height: 29px;
   border-radius: 2px;
-  box-shadow: var(--box-shadow-one);
-  background-color: var(--third-color);
-  color: var(--color-car-label);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  background-color: #99e2d0;
+  color: #008766;
   top: 7px;
   right: 9px;
   align-content: center;
@@ -292,7 +314,7 @@ header {
   align-items: center;
   width: 100%;
   height: 30%;
-  background-color: var(--color-white);
+  background-color: #ffffff;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
@@ -338,12 +360,15 @@ header {
   font-weight: 300;
 }
 
+/*************/
+/**Utils**/
+/*************/
 /****Footer****/
 footer {
   display: flex;
   flex-direction: column;
   height: auto;
-  background-color: var(--background-color-footer);
+  background-color: #353535;
   gap: 16px;
   padding: 22px 25px 22px 25px;
   box-sizing: border-box;
@@ -359,7 +384,7 @@ footer {
 
 .footer__title h1 {
   margin: 0;
-  font-family: var(--font-family-2);
+  font-family: "Shrikhand";
   font-weight: 400;
   font-style: italic;
   color: #ffffff;
@@ -401,6 +426,9 @@ footer {
 /***********/
 /***Pages***/
 /***********/
+/*************/
+/**Utils**/
+/*************/
 /**Main High**/
 .main__high {
   display: flex;
@@ -442,10 +470,10 @@ footer {
   width: 186px;
   height: 50px;
   border-radius: 25px;
-  box-shadow: var(--box-shadow-three);
-  background: linear-gradient(0deg, var(--main-color), var(--secondary-color));
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  background: linear-gradient(0deg, #9356dc, #ff79da);
   border-style: none;
-  color: var(--color-white);
+  color: #ffffff;
   font-weight: 500;
 }
 .main__high__btn-dark-pink:hover {
@@ -456,7 +484,7 @@ footer {
 .main__center {
   display: flex;
   flex-direction: column;
-  background-color: var(--color-white);
+  background-color: #ffffff;
   box-sizing: border-box;
   gap: 25px;
   padding: 40px 0px 50px 0px;
@@ -494,9 +522,9 @@ footer {
   }
 }
 .main__center__boutton {
-  background-color: var(--color-white);
+  background-color: #ffffff;
   border-radius: 20px;
-  box-shadow: var(--box-shadow-for);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
   border-style: none;
   display: flex;
   justify-content: center;
@@ -512,13 +540,13 @@ footer {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: var(--main-color);
+  background-color: #9356dc;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   left: -10px;
-  color: var(--color-white);
+  color: #ffffff;
 }
 .main__center__boutton__icon-texte {
   display: flex;
@@ -527,15 +555,16 @@ footer {
   gap: 12%;
   align-items: center;
   margin-left: 10%;
+  font-weight: 500;
 }
 .main__center__boutton__icon-texte i {
   font-size: 18px;
 }
 .main__center__band-boutton .main__center__boutton__icon-texte i {
-  color: var(--color-grey);
+  color: #7e7e7e;
 }
 .main__center__band-boutton .main__center__boutton__icon-texte:hover i {
-  color: var(--main-color);
+  color: #9356dc;
 }
 
 /**** Main Down****/
@@ -606,15 +635,18 @@ footer {
   }
 }
 
+/*************/
+/**Utils**/
+/*************/
 /***Main Restaurants***/
 .main-background {
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 1024px) {
-  .main-background .main-background {
+  .main-background {
     align-items: center;
-    background-color: var(--color-white);
+    background-color: #ffffff;
   }
 }
 
@@ -624,12 +656,12 @@ footer {
   height: 275px;
 }
 @media (min-width: 768px) {
-  .main-image .main-image {
+  .main-image {
     height: 375px;
   }
 }
 @media (min-width: 1024px) {
-  .main-image .main-image {
+  .main-image {
     height: 500px;
   }
 }
@@ -646,7 +678,7 @@ footer {
   height: auto;
 }
 @media (min-width: 1024px) {
-  .main-menu-centre .main-menu-centre {
+  .main-menu-centre {
     width: 73%;
   }
 }
@@ -673,7 +705,7 @@ footer {
   transition: opacity 0.5s ease-in-out;
 }
 @media (min-width: 768px) {
-  .main-menu__entrees .main-menu__entrees {
+  .main-menu__entrees {
     width: 80%;
   }
 }
@@ -697,7 +729,7 @@ footer {
   transition: opacity 0.5s ease-in-out;
 }
 @media (min-width: 768px) {
-  .main-menu__plats .main-menu__plats {
+  .main-menu__plats {
     width: 80%;
   }
 }
@@ -721,7 +753,7 @@ footer {
   transition: opacity 0.5s ease-in-out;
 }
 @media (min-width: 768px) {
-  .main-menu__desserts .main-menu__desserts {
+  .main-menu__desserts {
     width: 80%;
   }
 }
@@ -737,6 +769,12 @@ footer {
 .main-menu__bouton {
   margin: 40px 0;
   box-sizing: border-box;
+}
+.main-menu .menu-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
 
 .main-titre {
@@ -755,7 +793,7 @@ footer {
   padding-top: 32px;
 }
 .main-titre__h1 {
-  font-family: "Shrikhand", serif;
+  font-family: "Shrikhand";
   font-weight: 400;
   font-style: italic;
   font-size: 28px;

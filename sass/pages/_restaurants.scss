@@ -1,12 +1,12 @@
+@use "../utils/variables" as vars;
+
 /***Main Restaurants***/
 .main-background {
   display: flex;
   flex-direction: column;
   @media (min-width: 1024px) {
-    .main-background {
-      align-items: center;
-      background-color: var(--color-white);
-    }
+    align-items: center;
+    background-color: vars.$color-white;
   }
 }
 
@@ -16,14 +16,10 @@
   height: 275px;
 
   @media (min-width: 768px) {
-    .main-image {
-      height: 375px;
-    }
+    height: 375px;
   }
   @media (min-width: 1024px) {
-    .main-image {
-      height: 500px;
-    }
+    height: 500px;
   }
   img {
     width: 100%;
@@ -39,9 +35,7 @@
   height: auto;
 
   @media (min-width: 1024px) {
-    .main-menu-centre {
-      width: 73%;
-    }
+    width: 73%;
   }
 }
 .main-menu {
@@ -51,7 +45,7 @@
   align-items: center;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  background-color: #f6f6f6;
+  background-color: vars.$background-color-body;
   position: relative;
   margin-top: -55px;
   &__entrees {
@@ -64,14 +58,12 @@
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     @media (min-width: 768px) {
-      .main-menu__entrees {
-        width: 80%;
-      }
+      width: 80%;
     }
     h2 {
       font-weight: 300;
       font-size: 16px;
-      border-bottom: solid 3px #99e2d0;
+      border-bottom: solid 3px vars.$third-color;
       width: 40px;
       text-transform: uppercase;
       margin-bottom: 0;
@@ -88,14 +80,12 @@
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     @media (min-width: 768px) {
-      .main-menu__plats {
-        width: 80%;
-      }
+      width: 80%;
     }
     h2 {
       font-weight: 300;
       font-size: 16px;
-      border-bottom: solid 3px #99e2d0;
+      border-bottom: solid 3px vars.$third-color;
       width: 40px;
       text-transform: uppercase;
       margin-bottom: 0;
@@ -112,14 +102,12 @@
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     @media (min-width: 768px) {
-      .main-menu__desserts {
-        width: 80%;
-      }
+      width: 80%;
     }
     h2 {
       font-weight: 300;
       font-size: 16px;
-      border-bottom: solid 3px #99e2d0;
+      border-bottom: solid 3px vars.$third-color;
       width: 40px;
       text-transform: uppercase;
       margin-bottom: 0;
@@ -129,6 +117,12 @@
   &__bouton {
     margin: 40px 0;
     box-sizing: border-box;
+  }
+  .menu-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
 }
 
@@ -147,7 +141,7 @@
     padding-top: 32px;
   }
   &__h1 {
-    font-family: "Shrikhand", serif;
+    font-family: vars.$font-family-2;
     font-weight: 400;
     font-style: italic;
     font-size: 28px;
