@@ -1,17 +1,15 @@
-@use "../utils/variables" as vars;
 * {
   font-family: "Roboto", sans-serif;
 }
 
 /***Body***/
 body {
-  background-color: vars.$background-color-body;
+  background-color: $background-color-body;
   margin: 0;
 }
 
 .main-container {
   box-sizing: border-box;
   min-width: 345px;
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
 }

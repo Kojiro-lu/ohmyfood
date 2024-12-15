@@ -1,31 +1,33 @@
 /*************/
 /**Utils**/
 /*************/
-@use "utils/variables" as vars;
-@use "utils/animations";
+@import "utils/variables";
+@import "utils/mixin";
+@import "utils/animations";
 
 /*************/
 /****Base*****/
 /*************/
-@use "base/body";
-@use "base/main";
+@import "base/body";
+@import "base/main";
 
 /*************/
 /****Layout***/
 /*************/
-@use "layouts/boutton-dark-pink";
+@import "layouts/header";
+@import "layouts/footer";
 
 /************/
 /*Components*/
 /************/
-@use "components/loader";
-@use "components/header";
-@use "components/menu-card";
-@use "components/card";
-@use "components/footer";
+@import "components/loader";
+
+@import "components/boutton-dark-pink";
+@import "components/menu-card";
+@import "components/card";
 
 /***********/
 /***Pages***/
 /***********/
-@use "pages/home";
-@use "pages/restaurants";
+@import "pages/home";
+@import "pages/restaurants";

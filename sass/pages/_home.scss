@@ -1,10 +1,6 @@
-@use "../utils/variables" as vars;
-
 /**Main High**/
 .main__high {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-column-center;
   text-align: center;
   gap: 25px;
   width: 100%;
@@ -13,7 +9,7 @@
   box-sizing: border-box;
   padding: 40px 0px 50px 0px;
 
-  @media (min-width: 1024px) {
+  @include breakpoint("Desktop") {
     padding: 25px 0px 25px 0px;
   }
   h2 {
@@ -21,7 +17,7 @@
     box-sizing: border-box;
     padding: 0px 45px 0px 45px;
 
-    @media (min-width: 1024px) {
+    @include breakpoint("Desktop") {
       font-size: 40px;
     }
   }
@@ -29,7 +25,7 @@
     margin: 0;
     padding: 0px 5px 0px 5px;
 
-    @media (min-width: 1024px) {
+    @include breakpoint("Desktop") {
       font-size: 18px;
     }
   }
@@ -37,10 +33,10 @@
     width: 186px;
     height: 50px;
     border-radius: 25px;
-    box-shadow: vars.$box-shadow-three;
-    background: linear-gradient(0deg, vars.$main-color, vars.$secondary-color);
+    box-shadow: $box-shadow-three;
+    background: linear-gradient(0deg, $main-color, $secondary-color);
     border-style: none;
-    color: vars.$color-white;
+    color: $color-white;
     font-weight: 500;
     &:hover {
       opacity: 75%;
@@ -50,43 +46,39 @@
 
 /***Main Center***/
 .main__center {
-  display: flex;
-  flex-direction: column;
-  background-color: vars.$color-white;
+  @include flex-column;
+  background-color: $color-white;
   box-sizing: border-box;
   gap: 25px;
   padding: 40px 0px 50px 0px;
 
-  @media (min-width: 1024px) {
+  @include breakpoint("Desktop") {
     justify-content: center;
     align-items: center;
     gap: 30px;
   }
   h2 {
     margin: 0 4% 0 4%;
-    @media (min-width: 1024px) {
+    @include breakpoint("Desktop") {
       margin: 0;
       width: 75%;
     }
   }
   &__band-boutton {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column-center;
     gap: 25px;
     margin: 0 4% 0 4%;
-    @media (min-width: 1024px) {
-      display: flex;
-      flex-direction: row;
+    @include breakpoint("Desktop") {
+      @include flex-row;
       margin: 0;
-      width: 75%;
+      width: 73%;
       justify-content: space-between;
     }
   }
   &__boutton {
-    background-color: vars.$color-white;
+    background-color: $color-white;
     border-radius: 20px;
-    box-shadow: vars.$box-shadow-for;
+    box-shadow: $box-shadow-for;
     border-style: none;
     display: flex;
     justify-content: center;
@@ -101,13 +93,13 @@
       width: 24px;
       height: 24px;
       border-radius: 50%;
-      background-color: vars.$main-color;
+      background-color: $main-color;
       display: flex;
       justify-content: center;
       align-items: center;
       position: absolute;
       left: -10px;
-      color: vars.$color-white;
+      color: $color-white;
     }
     &__icon-texte {
       display: flex;
@@ -123,50 +115,47 @@
     }
   }
   &__band-boutton .main__center__boutton__icon-texte i {
-    color: vars.$color-grey-icone;
+    color: $color-grey-icone;
   }
   &__band-boutton .main__center__boutton__icon-texte:hover i {
-    color: vars.$main-color;
+    color: $main-color;
   }
 }
 
 /**** Main Down****/
 .main__down {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include center-column;
   align-items: center;
   width: auto;
   padding: 40px 0px 50px 0px;
   gap: 25px;
-  @media (min-width: 1024px) {
+  @include breakpoint("Desktop") {
     box-sizing: border-box;
     padding: 25px 0px 25px 0px;
   }
   &__title {
     width: 100%;
-    @media (min-width: 1024px) {
+    @include breakpoint("Desktop") {
       width: 75%;
       height: auto;
     }
     h2 {
       margin: 0 4% 0 4%;
 
-      @media (min-width: 1024px) {
+      @include breakpoint("Desktop") {
         margin: 0;
       }
     }
   }
   &__cards {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     gap: 18px;
-    @media (min-width: 768px) {
+    @include breakpoint("Tablet") {
       flex-wrap: wrap;
       flex-direction: row;
       justify-content: space-evenly;
     }
-    @media (min-width: 1024px) {
+    @include breakpoint("Desktop") {
       flex-direction: row;
       flex-wrap: wrap;
       width: 75%;
@@ -181,7 +170,7 @@
   &__card {
     width: 340px;
     height: 251px;
-    @media (min-width: 1024px) {
+    @include breakpoint("Desktop") {
       width: 45%;
     }
   }

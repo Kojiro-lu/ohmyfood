@@ -1,6 +1,4 @@
 /***Main***/
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include center-column;
 }

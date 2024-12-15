@@ -1,35 +1,29 @@
-@use "../utils/variables" as vars;
-
 /****Footer****/
-footer {
-  display: flex;
-  flex-direction: column;
+.footer {
+  @include flex-column;
   height: auto;
-  background-color: vars.$background-color-footer;
+  background-color: $background-color-footer;
   gap: 16px;
   padding: 22px 25px 22px 25px;
   box-sizing: border-box;
-  @media (min-width: 1024px) {
+  @include breakpoint("Desktop") {
     flex-direction: row-reverse;
     height: 114px;
     padding: 25px 30px 25px 30px;
     align-items: end;
   }
-}
-.footer {
   &__title h1 {
     margin: 0;
-    font-family: vars.$font-family-2;
+    font-family: $font-family-2;
     font-weight: 400;
     font-style: italic;
     color: #ffffff;
     font-size: 18px;
   }
   &__text {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     gap: 7px;
-    @media (min-width: 1024px) {
+    @include breakpoint("Desktop") {
       flex-direction: row;
       width: 661px;
     }
@@ -37,12 +31,11 @@ footer {
       color: #ffffff;
       text-decoration: none;
       font-size: 16px;
-      display: flex;
-      flex-direction: row;
+      @include flex-row;
       gap: 3%;
       align-items: center;
 
-      @media (min-width: 1024px) {
+      @include breakpoint("Desktop") {
         display: inline;
       }
     }
@@ -50,7 +43,7 @@ footer {
 }
 .fa-utensils,
 .fa-handshake-angle {
-  color: vars.$color-white;
+  color: $color-white;
   font-size: 12px;
   width: 11px;
 }

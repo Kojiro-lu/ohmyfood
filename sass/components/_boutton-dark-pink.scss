@@ -1,0 +1,13 @@
+.btn-dark-pink {
+  width: 186px;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: $box-shadow-three;
+  background: linear-gradient(0deg, $main-color, $secondary-color);
+  border-style: none;
+  color: $color-white;
+  font-weight: 500;
+  &:hover {
+    opacity: 75%;
+  }
+}

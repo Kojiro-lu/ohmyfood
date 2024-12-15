@@ -1,20 +1,15 @@
-@use "../utils/variables" as vars;
-
 /**** Header ****/
-header {
-  display: flex;
-  flex-direction: column;
-}
+
 .header {
+  @include flex-column;
   &__title {
-    background-color: vars.$color-white;
-    display: flex;
-    flex-direction: row;
+    background-color: $color-white;
+    @include flex-row;
     align-items: center;
     justify-content: center;
     height: 63px;
     width: 100%;
-    box-shadow: vars.$box-shadow-one;
+    box-shadow: $box-shadow-one;
     position: relative;
 
     &__logo img {
@@ -29,21 +24,20 @@ header {
     }
   }
   &__localisation {
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
     align-items: center;
     justify-content: center;
     height: 50px;
     width: 100%;
-    background-color: vars.$color-grey-header;
-    box-shadow: vars.$box-shadow-two;
+    background-color: $color-grey-header;
+    box-shadow: $box-shadow-two;
     gap: 5%;
-    @media (min-width: 1024px) {
+    @include breakpoint("Desktop") {
       gap: 1.5%;
     }
 
     &__icone .fa-solid {
-      color: vars.$color-black;
+      color: $color-black;
     }
     p {
       margin: 0;
