@@ -43,7 +43,10 @@
   background-color: $background-color-body;
   position: relative;
   margin-top: -55px;
-  &__entrees {
+  gap: 15px;
+  &__entrees,
+  &__plats,
+  &__desserts {
     @include flex-column;
     gap: 12px;
     padding: 10px 10px 0px 10px;
@@ -51,9 +54,6 @@
     animation: appear 1s ease forwards;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    @include breakpoint("Tablet") {
-      width: 80%;
-    }
     h2 {
       font-weight: 300;
       font-size: 16px;
@@ -62,57 +62,6 @@
       text-transform: uppercase;
       margin-bottom: 0;
       padding-bottom: 8px;
-      @include breakpoint("Desktop") {
-        margin-left: 16%;
-      }
-    }
-  }
-  &__plats {
-    @include flex-column-center;
-    gap: 12px;
-    padding: 30px 10px 0px 10px;
-    box-sizing: border-box;
-    animation: appear 1s ease forwards 0.5s;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    @include breakpoint("Tablet") {
-      width: 80%;
-    }
-    h2 {
-      font-weight: 300;
-      font-size: 16px;
-      border-bottom: solid 3px $third-color;
-      width: 40px;
-      text-transform: uppercase;
-      margin-bottom: 0;
-      padding-bottom: 8px;
-      @include breakpoint("Desktop") {
-        margin-left: 16%;
-      }
-    }
-  }
-  &__desserts {
-    @include flex-column-center;
-    gap: 12px;
-    padding: 30px 10px 0px 10px;
-    box-sizing: border-box;
-    animation: appear 1s ease forwards 1s;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    @include breakpoint("Tablet") {
-      width: 80%;
-    }
-    h2 {
-      font-weight: 300;
-      font-size: 16px;
-      border-bottom: solid 3px $third-color;
-      width: 40px;
-      text-transform: uppercase;
-      margin-bottom: 0;
-      padding-bottom: 8px;
-      @include breakpoint("Desktop") {
-        margin-left: 16%;
-      }
     }
   }
   &__bouton {

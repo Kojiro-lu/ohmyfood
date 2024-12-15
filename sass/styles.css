@@ -662,8 +662,9 @@ main {
   background-color: #f6f6f6;
   position: relative;
   margin-top: -55px;
+  gap: 15px;
 }
-.main-menu__entrees {
+.main-menu__entrees, .main-menu__plats, .main-menu__desserts {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -673,12 +674,7 @@ main {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
-@media (min-width: 768px) {
-  .main-menu__entrees {
-    width: 80%;
-  }
-}
-.main-menu__entrees h2 {
+.main-menu__entrees h2, .main-menu__plats h2, .main-menu__desserts h2 {
   font-weight: 300;
   font-size: 16px;
   border-bottom: solid 3px #99e2d0;
@@ -686,71 +682,6 @@ main {
   text-transform: uppercase;
   margin-bottom: 0;
   padding-bottom: 8px;
-}
-@media (min-width: 1024px) {
-  .main-menu__entrees h2 {
-    margin-left: 16%;
-  }
-}
-.main-menu__plats {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  padding: 30px 10px 0px 10px;
-  box-sizing: border-box;
-  animation: appear 1s ease forwards 0.5s;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-@media (min-width: 768px) {
-  .main-menu__plats {
-    width: 80%;
-  }
-}
-.main-menu__plats h2 {
-  font-weight: 300;
-  font-size: 16px;
-  border-bottom: solid 3px #99e2d0;
-  width: 40px;
-  text-transform: uppercase;
-  margin-bottom: 0;
-  padding-bottom: 8px;
-}
-@media (min-width: 1024px) {
-  .main-menu__plats h2 {
-    margin-left: 16%;
-  }
-}
-.main-menu__desserts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  padding: 30px 10px 0px 10px;
-  box-sizing: border-box;
-  animation: appear 1s ease forwards 1s;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-@media (min-width: 768px) {
-  .main-menu__desserts {
-    width: 80%;
-  }
-}
-.main-menu__desserts h2 {
-  font-weight: 300;
-  font-size: 16px;
-  border-bottom: solid 3px #99e2d0;
-  width: 40px;
-  text-transform: uppercase;
-  margin-bottom: 0;
-  padding-bottom: 8px;
-}
-@media (min-width: 1024px) {
-  .main-menu__desserts h2 {
-    margin-left: 16%;
-  }
 }
 .main-menu__bouton {
   margin: 40px 0;
