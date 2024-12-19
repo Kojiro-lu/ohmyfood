@@ -130,7 +130,7 @@ main {
     align-items: end;
   }
 }
-.footer__title h1 {
+.footer__title h2 {
   margin: 0;
   font-family: "Shrikhand";
   font-weight: 400;
