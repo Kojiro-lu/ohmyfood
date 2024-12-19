@@ -683,6 +683,15 @@ main {
   margin-bottom: 0;
   padding-bottom: 8px;
 }
+.main-menu__entrees {
+  animation-delay: 0s;
+}
+.main-menu__plats {
+  animation-delay: 1s;
+}
+.main-menu__desserts {
+  animation-delay: 2s;
+}
 .main-menu__bouton {
   margin: 40px 0;
   box-sizing: border-box;

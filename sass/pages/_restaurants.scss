@@ -63,6 +63,15 @@
       padding-bottom: 8px;
     }
   }
+  &__entrees {
+    animation-delay: 0s;
+  }
+  &__plats {
+    animation-delay: 1s;
+  }
+  &__desserts {
+    animation-delay: 2s;
+  }
   &__bouton {
     margin: 40px 0;
     box-sizing: border-box;
