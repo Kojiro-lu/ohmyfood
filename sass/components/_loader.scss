@@ -10,12 +10,12 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  animation: bk 3s ease-in forwards;
-  -moz-animation: bk 3s ease-in forwards;
+  animation: bk 6s ease-in forwards;
+  -moz-animation: bk 6s ease-in forwards;
   /* Firefox */
-  -webkit-animation: bk 3s ease-in forwards;
+  -webkit-animation: bk 6s ease-in forwards;
   /* Safari et Chrome */
-  -o-animation: bk 3s ease-in forwards;
+  -o-animation: bk 6s ease-in forwards;
   /* Opera */
   &__spinner {
     width: 100px;
@@ -25,12 +25,12 @@
     border-top-color: $secondary-color; /* Couleur du dessus du loader */
     border-bottom-color: $third-color; /* Couleur bas du loader */
     z-index: 1;
-    animation: spin 3000ms ease-in forwards;
-    -moz-animation: spin 3000ms ease-in forwards;
+    animation: spin 6s ease-in forwards;
+    -moz-animation: spin 6s ease-in forwards;
     /* Firefox */
-    -webkit-animation: spin 3000ms ease-in forwards;
+    -webkit-animation: spin 6s ease-in forwards;
     /* Safari et Chrome */
-    -o-animation: spin 3000ms ease-in forwards;
+    -o-animation: spin 6s ease-in forwards;
     /* Opera */
   }
 }
